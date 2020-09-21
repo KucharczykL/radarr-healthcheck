@@ -5,6 +5,6 @@ then
   echo "No errors."
 	exit 0
 else
-  echo "Errors occured. Check the web interface."
+  echo "Errors occurred. Check the web interface."
 	exit 1
 fi
