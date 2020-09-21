@@ -1,5 +1,5 @@
 #!/bin/bash
-set -x
+test $RADARR_URL -a $APIKEY || echo "RADARR_URL or APIKEY not defined."; exit 1
 curl ${RADARR_URL}/api/v3/health?apiKey=${APIKEY} 2>&1 | grep -q error
 if [ "$?" -eq 1 ]
 then

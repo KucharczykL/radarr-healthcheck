@@ -1,11 +1,12 @@
-# Radarr - With Healthcheck
-This simple addition to the Radarr container adds a
-health check that polls the official API to see
-if there are any errors reported.
+# Radarr — With Healthcheck
+
+Simple healthcheck that polls the official Radarr v3 API to see if there are
+any problems. Based on the `linuxserver/radarr:preview` image.
 
 ## Environmental Variables
 
-* `RADARR_URL` - The URL to your Radarr container.
-* `APIKEY` - This is by default copied from the `config.xml` file
-in the `config` directory but you can set it here
-explicitly if you like.
+Both MUST be defined otherwise the healthcheck will fail.
+
+- `RADARR_URL` - The URL to your Radarr container. Either an IP address with
+  port number or URL if you're using a reverse proxy.
+- `APIKEY` - Can be found in Settings -> General.
